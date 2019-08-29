@@ -1,14 +1,14 @@
 function add(a,b){
-    return parseFloat((a+b).toFixed(12));
+    return parseFloat((a+b).toPrecision(13));
 }
 function sub(a,b){
-    return parseFloat((a-b).toFixed(12));
+    return parseFloat((a-b).toPrecision(13));
 }
 function mul(a,b){
-    return parseFloat((a*b).toFixed(12));
+    return parseFloat((a*b).toPrecision(13));
 }
 function div(a,b){
-    return parseFloat((a/b).toFixed(12));
+    return parseFloat((a/b).toPrecision(13));
 }
 
 function operate(op,a,b){
