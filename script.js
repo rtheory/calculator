@@ -48,11 +48,14 @@ document.querySelector("#back").addEventListener("click", function(e){
 
 document.querySelectorAll(".button.num").forEach(btnNum => {
     btnNum.addEventListener("click", function(e){
+        let btnTxt = e.target.textContent;
         if (displayBottom.textContent === "0" || clearOnNextClick){
-            displayBottom.textContent = e.target.textContent;
+            displayBottom.textContent = btnTxt;
             clearOnNextClick = false;
+        } else if (btnTxt === "." && displayBottom.textContent.includes(".")) {
+            // do nothing; prevent user from hitting "." more than once
         } else {
-            displayBottom.textContent += e.target.textContent;
+            displayBottom.textContent += btnTxt;
         }
     });
 })
