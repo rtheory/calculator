@@ -40,6 +40,10 @@ let clearScreen = function(){
 
 document.querySelector("#clear").addEventListener("click", clearScreen);
 
+document.querySelector("#back").addEventListener("click", function(e){
+    displayBottom.textContent = displayBottom.textContent.slice(0, -1);
+});
+
 document.querySelectorAll(".button.num").forEach(btnNum => {
     btnNum.addEventListener("click", function(e){
         if (displayBottom.textContent === "0" || clearOnNextClick){
